@@ -79,7 +79,8 @@ def animation(): # task 3
             for row in f:
                 print(''.join(px if ch == '1' else empty for ch in row))
             time.sleep(0.2)
-        print("\u001b[?25h", end="")
+    
+    print("\u001b[?25h", end="")
 
 
 def sequence(): # task 4
