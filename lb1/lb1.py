@@ -71,15 +71,14 @@ def animation(): # task 3
     empty = '  '
 
     print("\u001b[?25l", end="")
-    try:
-        for _ in range(5):
-            for f in frames:
-                os.system("cls")
-                print("\u001b[H", end="")
-                for row in f:
-                    print(''.join(px if ch == '1' else empty for ch in row))
-                time.sleep(0.2)
-    finally:
+
+    for _ in range(5):
+        for f in frames:
+            os.system("cls")
+            print("\u001b[H", end="")
+            for row in f:
+                print(''.join(px if ch == '1' else empty for ch in row))
+            time.sleep(0.2)
         print("\u001b[?25h", end="")
 
 
